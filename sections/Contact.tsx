@@ -224,7 +224,9 @@ const Contact = () => {
           </Reveal>
         </div>
         <Reveal width="100%">
-          <Button className="w-full font-poppins">Send</Button>
+          <Button className="w-full font-port font-semibold text-lg">
+            Send
+          </Button>
         </Reveal>
       </form>
     </div>

@@ -15,7 +15,6 @@ const GithubCalendar = () => {
   return (
     <div className="w-full flex justify-center mt-16">
       <GitHubCalendar
-        blockRadius={10}
         blockSize={17}
         hideTotalCount={true}
         theme={{

@@ -1,26 +1,27 @@
+"use client";
+
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { Reveal } from "./Reveal";
 import Link from "next/link";
 // import { DropdownShare } from "./DropdownShare";
 import { formatTanggal } from "@/lib/helper/FormatTanggal";
+import { Post } from "@/lib/types";
 
-type Props = {
-  id?: string;
-  title?: string;
-  summary?: any;
-  cover?: string;
-  date?: any;
-  categories?: any;
-  slug?: string;
-};
-const Card = ({ id, title, cover, summary, date, categories, slug }: Props) => {
+const Card = ({
+  title,
+  featured_image,
+  excerpt,
+  date,
+  categories,
+  slug,
+}: Post) => {
   const router = useRouter();
   return (
     <div className="relative bg-neutral-900 rounded">
       <Reveal width="100%">
         <Image
-          src={cover || ""}
+          src={featured_image || ""}
           alt={title || ""}
           width={500}
           height={250}
@@ -51,14 +52,14 @@ const Card = ({ id, title, cover, summary, date, categories, slug }: Props) => {
           </Reveal>
           <Reveal>
             <div
-              dangerouslySetInnerHTML={{ __html: summary }}
+              dangerouslySetInnerHTML={{ __html: excerpt }}
               className="mt-2 text-sm text-neutral-200 line-clamp-5 font-poppins"
             />
           </Reveal>
           <div className="flex justify-between items-center mt-3">
             <Link
               href={`/post/${slug}`}
-              className="font-port font-bold text-cyan-500 hover:text-cyan-600 relative after:absolute after:w-full after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:rounded-full after:bg-cyan-500 after:hover:bg-cyan-600"
+              className="font-port font-bold text-violet-500 hover:text-violet-600 relative after:absolute after:w-full after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:rounded-full after:bg-violet-500 after:hover:bg-violet-600"
             >
               Read More
             </Link>

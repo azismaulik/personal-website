@@ -14,6 +14,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { Menu } from "./Menu";
+import Link from "next/link";
 
 const menus = [
   {
@@ -24,8 +25,8 @@ const menus = [
     ),
   },
   {
-    name: "Post",
-    url: "/post",
+    name: "Blog",
+    url: "/blog",
     icon: (
       <Wallpaper className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-600 dark:text-neutral-200 group-hover:text-cyan-500" />
     ),
@@ -76,10 +77,9 @@ const Header = () => {
         } container max-w-6xl mx-auto flex justify-between items-center px-4 py-2 fixed left-0 right-0 z-10 lg:rounded-lg transition-all duration-300`}
       >
         <Reveal>
-          <PersonStanding
-            onClick={() => router.push("/")}
-            className="w-16 h-16 text-neutral-900 dark:text-neutral-200 group-hover:text-cyan-500"
-          />
+          <Link href="/">
+            <PersonStanding className="w-16 h-16 text-neutral-900 dark:text-neutral-200 group-hover:text-cyan-500" />
+          </Link>
         </Reveal>
         <Reveal>
           <div
