@@ -174,7 +174,7 @@ const Contact = () => {
               onChange={handleChange}
               type="text"
               placeholder="Your Name"
-              className="placeholder:text-neutral-500 w-full rounded px-3 py-2 bg-neutral-200 dark:bg-neutral-900 focus:outline-none font-poppins text-neutral-900 dark:text-white text-sm"
+              className="placeholder:text-neutral-400 w-full rounded px-3 py-2 bg-neutral-200 dark:bg-neutral-900 focus:outline-none font-poppins text-neutral-900 dark:text-white text-sm"
               required
             />
           </Reveal>
@@ -196,7 +196,7 @@ const Contact = () => {
               onChange={handleChange}
               type="text"
               placeholder="Your Email"
-              className="placeholder:text-neutral-500 w-full rounded px-3 py-2 bg-neutral-200 dark:bg-neutral-900 focus:outline-none font-poppins text-neutral-900 dark:text-white text-sm"
+              className="placeholder:text-neutral-400 w-full rounded px-3 py-2 bg-neutral-200 dark:bg-neutral-900 focus:outline-none font-poppins text-neutral-900 dark:text-white text-sm"
               required
             />
           </Reveal>
@@ -218,7 +218,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleTextareaChange}
               placeholder="Your Name"
-              className="placeholder:text-neutral-500 w-full rounded px-3 py-2 bg-neutral-200 dark:bg-neutral-900 focus:outline-none font-poppins text-neutral-900 dark:text-white text-sm"
+              className="placeholder:text-neutral-400 w-full rounded px-3 py-2 bg-neutral-200 dark:bg-neutral-900 focus:outline-none font-poppins text-neutral-900 dark:text-white text-sm"
               required
             />
           </Reveal>

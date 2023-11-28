@@ -1,28 +1,28 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import React, { useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
 
 const GithubCalendar = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
-  // get theme from localStorage
+  const { theme } = useTheme();
 
   useEffect(() => {
-    const theme = localStorage?.getItem("theme");
     setIsDarkMode(theme === "dark" ? true : false);
-  }, [isDarkMode]);
+  }, [theme]);
 
   return (
     <div className="w-full flex justify-center mt-16">
       <GitHubCalendar
-        blockSize={17}
+        username="azismaulik"
         hideTotalCount={true}
         theme={{
           light: ["#d7dbd7", "rgb(0, 218, 61)"],
           dark: ["#333", "rgb(149, 18, 199)"],
         }}
         colorScheme={isDarkMode ? "dark" : "light"}
-        username="azismaulik"
+        showWeekdayLabels={true}
       />
     </div>
   );

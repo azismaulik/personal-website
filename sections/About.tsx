@@ -14,6 +14,7 @@ const About = () => {
               alt="line"
               width={40}
               height={40}
+              priority
             />
             <span className="font-port text-3xl">About me</span>
           </h1>

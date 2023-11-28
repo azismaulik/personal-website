@@ -7,3 +7,12 @@ export type Post = {
   categories: string[];
   slug: string;
 };
+
+export type ProjectProps = {
+  name?: string;
+  image?: string;
+  description?: string;
+  link?: string;
+  tags?: string[];
+  stacks?: string[];
+};

@@ -6,6 +6,7 @@ import Blog from "@/sections/Blog";
 import Contact from "@/sections/Contact";
 import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
+import Project from "@/sections/Project";
 import Technology from "@/sections/Technology";
 
 export default function Home() {
@@ -15,9 +16,10 @@ export default function Home() {
       <About />
       <Technology />
       <Experience />
+      <Project />
       <Blog />
       <Contact />
-      <GithubCalendar />
+      {/* <GithubCalendar /> */}
     </div>
   );
 }

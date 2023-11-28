@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import tinycolor from "tinycolor2";
-import { copyToClipboard } from "@/lib/helper/ClipToClipboard";
+import { copyToClipboard } from "@/helper/ClipToClipboard";
 import { HexColorPicker } from "react-colorful";
 import Calculator from "@/components/calculator";
 import { Reveal } from "@/components/Reveal";

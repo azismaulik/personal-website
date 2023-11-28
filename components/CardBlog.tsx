@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Reveal } from "./Reveal";
 import Link from "next/link";
 // import { DropdownShare } from "./DropdownShare";
-import { formatTanggal } from "@/lib/helper/FormatTanggal";
+import { formatTanggal } from "@/helper/FormatTanggal";
 import { Post } from "@/lib/types";
 
 const Card = ({

@@ -13,7 +13,7 @@ import { Post } from "@/lib/types";
 //   return data;
 // }
 
-const BlogPage = async () => {
+const BlogPage = () => {
   //   const posts = await getPosts();
   //   const [posts, setPosts] = React.useState<Post[]>([]);
 

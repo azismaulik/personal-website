@@ -12,7 +12,7 @@ import { Post } from "@/lib/types";
 //   return data;
 // }
 
-const Blog = async () => {
+const Blog = () => {
   // const posts = await getPosts();
 
   return (
@@ -43,7 +43,9 @@ const Blog = async () => {
       </div>
       <div className="my-6 flex justify-center">
         <Reveal>
-          <Button className="font-port font-semibold">View All</Button>
+          <Button size="sm" className="font-port font-semibold">
+            View All
+          </Button>
         </Reveal>
       </div>
     </section>

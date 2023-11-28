@@ -16,7 +16,7 @@ const Technology = () => {
               height={40}
               priority
             />
-            <span className="font-port text-3xl">Technology</span>
+            <span className="font-port text-3xl">Technology | Tools</span>
           </h1>
         </Reveal>
         <div className="flex-1 border-t border-neutral-700"></div>
@@ -51,6 +51,7 @@ const TechnologyCard = ({ icon, label }: { icon: string; label: string }) => {
           height={50}
           alt={icon}
           className="aspect-square"
+          priority
         />
       )}
     </div>
