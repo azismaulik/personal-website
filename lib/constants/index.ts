@@ -56,6 +56,7 @@ export const projects = [
     description: "",
     link: "https://azis-quran-app.vercel.app/",
     stacks: ["React", "TailwindCSS", "JavaScript", "DaisyUI", "Quran API"],
+    landscape: false,
   },
   {
     name: "Movie Collection",
@@ -63,6 +64,7 @@ export const projects = [
     description: "",
     link: "https://movie-collections.vercel.app/",
     stacks: ["React", "TailwindCSS", "JavaScript", "TMDB API"],
+    landscape: true,
   },
   {
     name: "AI Chatbot",
@@ -70,6 +72,7 @@ export const projects = [
     description: "",
     link: "https://azis-openai.vercel.app/chat",
     stacks: ["React", "TailwindCSS", "DaisyUI", "Javascript", "OpenAI API"],
+    landscape: true,
   },
   {
     name: "AI Image Generator",
@@ -87,6 +90,7 @@ export const projects = [
       "Express",
       "MongoDB",
     ],
+    landscape: true,
   },
   {
     name: "Game News",
@@ -94,6 +98,7 @@ export const projects = [
     description: "",
     link: "https://azis-game-news.vercel.app/",
     stacks: ["React", "Javascript", "TailwindCSS", "DaisyUI", "Game News API"],
+    landscape: true,
   },
   {
     name: "Playgrounds",
@@ -108,6 +113,7 @@ export const projects = [
       "FramerMotion",
       "HeadlessUI",
     ],
+    landscape: true,
   },
   {
     name: "Game Collections",
@@ -115,6 +121,7 @@ export const projects = [
     description: "",
     link: "https://games-collections.vercel.app/",
     stacks: ["React", "NextJS", "Javascript", "TailwindCSS", "RAWG API"],
+    landscape: true,
   },
   {
     name: "ZeitPlan App (UI)",
@@ -122,6 +129,7 @@ export const projects = [
     description: "",
     link: "https://zeitplan-ui.vercel.app/",
     stacks: ["React", "Javascript", "TailwindCSS", "DaisyUI", "AOS"],
+    landscape: false,
   },
   {
     name: "Game Events (UI)",
@@ -129,5 +137,6 @@ export const projects = [
     description: "",
     link: "https://azis-game-events.vercel.app/",
     stacks: ["React", "Javascript", "TailwindCSS", "DaisyUI"],
+    landscape: false,
   },
 ];

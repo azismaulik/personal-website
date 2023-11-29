@@ -6,11 +6,11 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { ProjectProps } from "@/lib/types";
+import { ChevronsRight } from "lucide-react";
+import { generateRandomColor } from "@/helper/GenerateRandomColor";
 
 export default function Card({
   name,
@@ -19,6 +19,7 @@ export default function Card({
   link,
   tags,
   stacks,
+  landscape,
 }: ProjectProps) {
   return (
     <>
@@ -39,14 +40,51 @@ export default function Card({
             </div>
           </Reveal>
         </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+        <DialogContent
+          className={`${
+            landscape ? "flex-col" : "flex-row w-full md:w-[80%]"
+          } flex gap-4`}
+        >
+          <Link href={link || ""}>
+            <Image
+              src={`/images/project/${image}`}
+              alt={name ? name : "project"}
+              width={500}
+              height={500}
+              className={`${landscape ? "w-full" : "w-1/2"} rounded-lg`}
+            />
+          </Link>
+          <div className="flex-1 flex flex-col gap-2">
+            <Link href={link || ""} className="font-port text-2xl font-bold">
+              {name}
+            </Link>
             <DialogDescription>
               This action cannot be undone. This will permanently delete your
               account and remove your data from our servers.
             </DialogDescription>
-          </DialogHeader>
+            <div className="flex flex-wrap gap-x-2">
+              {stacks?.map((stack) => (
+                <Fragment key={stack}>
+                  <span
+                    style={{ color: generateRandomColor() }}
+                    className={`font-port font-semibold text-sm`}
+                  >
+                    #{stack}
+                  </span>
+                </Fragment>
+              ))}
+            </div>
+            {link && (
+              <Link
+                href={link}
+                target="_blank"
+                className="text-neutral-800 dark:text-white flex items-center mt-auto font-semibold font-port"
+              >
+                <p>live view</p>
+                <ChevronsRight size={20} />
+              </Link>
+            )}
+          </div>
         </DialogContent>
       </Dialog>
     </>

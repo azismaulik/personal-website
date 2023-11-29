@@ -15,4 +15,5 @@ export type ProjectProps = {
   link?: string;
   tags?: string[];
   stacks?: string[];
+  landscape?: boolean;
 };
