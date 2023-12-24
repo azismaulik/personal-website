@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <body className="bg-white dark:bg-neutral-950">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className="container max-w-5xl mx-auto py-1 px-4 lg:px-0 bg-white dark:bg-neutral-950">
+          <main className="scroll-smooth container max-w-5xl mx-auto py-1 px-4 lg:px-0 bg-white dark:bg-neutral-950">
             <Header />
             {children}
           </main>

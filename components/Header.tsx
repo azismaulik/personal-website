@@ -1,7 +1,7 @@
 "use client";
 
 import { useScroll, motion, useSpring } from "framer-motion";
-import React from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
 import { ArrowDownToLine, PersonStanding } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
@@ -23,9 +23,9 @@ const Header = () => {
     restDelta: 0.001,
   });
 
-  const [isScroll, setIsScroll] = React.useState(false);
+  const [isScroll, setIsScroll] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScroll(true);
@@ -58,7 +58,7 @@ const Header = () => {
             : "bg-transparent top-0"
         } container max-w-5xl mx-auto flex justify-between items-center px-4 py-3 fixed left-0 right-0 z-20 lg:rounded-lg transition-all duration-300`}>
         <Reveal>
-          <Link href="/">
+          <Link href="/" aria-label="Logo">
             <PersonStanding className="w-16 h-16 text-neutral-900 dark:text-neutral-200 group-hover:text-cyan-500" />
           </Link>
         </Reveal>
@@ -70,11 +70,9 @@ const Header = () => {
                 : "dark:border-neutral-900 border-white"
             } bg-transparent dark:bg-neutral-900 border hidden lg:flex items-center rounded-md px-4 gap-2`}>
             {menus.map((item, index) => (
-              <React.Fragment key={index}>
-                <div
-                  onClick={() => {
-                    router.push(item.url);
-                  }}
+              <Fragment key={index}>
+                <Link
+                  href={item.url}
                   className={`${
                     pathname.includes(item.url)
                       ? "text-cyan-500"
@@ -84,11 +82,11 @@ const Header = () => {
                     <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-600 dark:text-neutral-200 group-hover:text-cyan-500" />
                   }
                   <span className="group-hover:text-cyan-500">{item.name}</span>
-                </div>
+                </Link>
                 {index < menus.length - 1 && (
                   <span className="h-6 w-[1px] bg-neutral-300 dark:bg-neutral-700"></span>
                 )}
-              </React.Fragment>
+              </Fragment>
             ))}
           </div>
         </Reveal>

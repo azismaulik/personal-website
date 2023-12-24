@@ -12,9 +12,9 @@ const Hero = () => {
         <Image
           src={profile}
           alt="me"
-          width={220}
-          height={220}
-          className="aspect-square w-[250px] sm:w-[300px]"
+          width={200}
+          height={200}
+          className="w-auto h-auto"
         />
       </Reveal>
       <div className="text-neutral-900 dark:text-white leading-tight md:text-7xl font-bold text-4xl sm:text-5xl text-center lg:text-left font-port">

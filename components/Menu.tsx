@@ -13,13 +13,22 @@ import { useRouter } from "next/navigation";
 
 export function Menu({ menus }: any) {
   const router = useRouter();
+
+  const handleDownload = () => {
+    const cvUrl = "/cv.pdf";
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "Azis Maulana Malik | CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="lg:hidden relative font-port text-lg"
-        >
+          className="lg:hidden relative font-port text-lg">
           Menu
         </Button>
       </DropdownMenuTrigger>
@@ -28,14 +37,15 @@ export function Menu({ menus }: any) {
           <DropdownMenuItem
             className="flex items-center gap-2 font-port text-md"
             key={menu.name}
-            onClick={() => router.push(menu.url)}
-          >
+            onClick={() => router.push(menu.url)}>
             {menu.icon}
             <span>{menu.name}</span>
           </DropdownMenuItem>
         ))}
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="flex items-center gap-2 font-port text-md">
+        <DropdownMenuItem
+          onClick={handleDownload}
+          className="flex items-center gap-2 font-port text-md">
           <Download className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-600 dark:text-neutral-200 group-hover:text-cyan-500" />
           <span>Download CV</span>
         </DropdownMenuItem>
