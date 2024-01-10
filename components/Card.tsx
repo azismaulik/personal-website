@@ -40,20 +40,14 @@ export default function Card({
             </div>
           </Reveal>
         </DialogTrigger>
-        <DialogContent
-          className={`${
-            landscape ? "flex-col" : "flex-row w-full md:w-[80%]"
-          } flex gap-4`}
-        >
-          <Link href={link || ""}>
-            <Image
-              src={`/images/project/${image}`}
-              alt={name ? name : "project"}
-              width={500}
-              height={500}
-              className={`${landscape ? "w-full" : "w-1/2"} rounded-lg`}
-            />
-          </Link>
+        <DialogContent className="flex w-full md:w-[80%] gap-4">
+          <Image
+            src={`/images/project/${image}`}
+            alt={name ? name : "project"}
+            width={500}
+            height={500}
+            className="w-1/2 rounded-lg"
+          />
           <div className="flex-1 flex flex-col gap-2">
             <Link href={link || ""} className="font-port text-2xl font-bold">
               {name}
@@ -67,8 +61,7 @@ export default function Card({
                 <Fragment key={stack}>
                   <span
                     style={{ color: generateRandomColor() }}
-                    className={`font-port font-semibold text-sm`}
-                  >
+                    className={`font-port font-semibold text-sm`}>
                     #{stack}
                   </span>
                 </Fragment>
@@ -78,8 +71,7 @@ export default function Card({
               <Link
                 href={link}
                 target="_blank"
-                className="text-neutral-800 dark:text-white flex items-center mt-auto font-semibold font-port"
-              >
+                className="text-neutral-800 dark:text-white flex items-center mt-auto font-semibold font-port">
                 <p>live view</p>
                 <ChevronsRight size={20} />
               </Link>

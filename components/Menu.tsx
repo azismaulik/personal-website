@@ -8,10 +8,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { menus } from "@/lib/constants";
 import { Download } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-export function Menu({ menus }: any) {
+export function Menu() {
   const router = useRouter();
 
   const handleDownload = () => {
@@ -33,10 +34,10 @@ export function Menu({ menus }: any) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 mr-4">
-        {menus.map((menu: any) => (
+        {menus.map((menu: any, i: number) => (
           <DropdownMenuItem
             className="flex items-center gap-2 font-port text-md"
-            key={menu.name}
+            key={i}
             onClick={() => router.push(menu.url)}>
             {menu.icon}
             <span>{menu.name}</span>

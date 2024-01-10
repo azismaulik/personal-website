@@ -1,5 +1,6 @@
 import CardExperience from "@/components/CardExperience";
 import { Reveal } from "@/components/Reveal";
+import { experiences } from "@/lib/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -22,10 +23,9 @@ const Experience = () => {
         <div className="flex-1 border-t border-neutral-400 dark:border-neutral-600"></div>
       </div>
       <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mt-6 p-4 rounded-xl border border-neutral-400 dark:border-neutral-600">
-        <CardExperience />
-        <CardExperience />
-        <CardExperience />
-        <CardExperience />
+        {experiences.map((item, i) => (
+          <CardExperience key={i} {...item} />
+        ))}
       </div>
     </section>
   );

@@ -17,3 +17,9 @@ export type ProjectProps = {
   stacks?: string[];
   landscape?: boolean;
 };
+
+export type ExperienceProps = {
+  title: string;
+  company_name: string;
+  date: string;
+};

@@ -104,7 +104,7 @@ const Header = () => {
             </Button>
           </Reveal>
           <Reveal>
-            <Menu menus={menus} />
+            <Menu />
           </Reveal>
         </div>
       </header>

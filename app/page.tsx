@@ -17,7 +17,7 @@ export default function Home() {
       <Technology />
       <Experience />
       <Project />
-      <Blog />
+      {/* <Blog /> */}
       <Contact />
       {/* <GithubCalendar /> */}
     </div>
