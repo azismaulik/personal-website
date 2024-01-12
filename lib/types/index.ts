@@ -12,7 +12,7 @@ export type ProjectProps = {
   name?: string;
   image?: string;
   description?: string;
-  link?: string;
+  link?: string | null;
   tags?: string[];
   stacks?: string[];
   landscape?: boolean;

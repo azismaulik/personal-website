@@ -31,7 +31,7 @@ export default function Card({
                 {name}
               </h1>
               <Image
-                className="absolute -right-12 rotate-12 group-hover:rotate-0 bottom-0 rounded group-hover:right-0 transition-all w-[60%]"
+                className="absolute -right-12 rotate-12 group-hover:rotate-0 bottom-0 rounded group-hover:right-0 transition-all w-[80%] h-auto"
                 src={`/images/project/${image}`}
                 alt="project"
                 width={500}
@@ -49,19 +49,21 @@ export default function Card({
             className="w-1/2 rounded-lg"
           />
           <div className="flex-1 flex flex-col gap-2">
-            <Link href={link || ""} className="font-port text-2xl font-bold">
+            <Link
+              href={link || ""}
+              target="_blank"
+              className="font-port text-2xl font-bold"
+            >
               {name}
             </Link>
-            <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </DialogDescription>
+            <DialogDescription>{description}</DialogDescription>
             <div className="flex flex-wrap gap-x-2">
               {stacks?.map((stack) => (
                 <Fragment key={stack}>
                   <span
                     style={{ color: generateRandomColor() }}
-                    className={`font-port font-semibold text-sm`}>
+                    className={`font-port font-semibold text-sm`}
+                  >
                     #{stack}
                   </span>
                 </Fragment>
@@ -71,7 +73,8 @@ export default function Card({
               <Link
                 href={link}
                 target="_blank"
-                className="text-neutral-800 dark:text-white flex items-center mt-auto font-semibold font-port">
+                className="text-neutral-800 dark:text-white flex items-center mt-auto font-semibold font-port"
+              >
                 <p>live view</p>
                 <ChevronsRight size={20} />
               </Link>

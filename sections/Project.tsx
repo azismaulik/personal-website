@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const Project = () => {
   const [viewAll, setViewAll] = useState(false);
   return (
-    <section id="project" className="mt-12">
+    <section id="projects" className="mt-12">
       <div className="flex gap-8 items-center">
         <Reveal>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-white flex gap-2 items-center">

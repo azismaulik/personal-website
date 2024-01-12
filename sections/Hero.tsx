@@ -20,12 +20,12 @@ const Hero = () => {
       <div className="text-neutral-900 dark:text-white leading-tight md:text-7xl font-bold text-4xl sm:text-5xl text-center lg:text-left font-port">
         <div className="flex justify-center lg:justify-start">
           <Reveal>
-            <h1>Azis M.</h1>
+            <h1>Azis Maulana M.</h1>
           </Reveal>
         </div>
         <div className="flex justify-center lg:justify-start">
           <Reveal>
-            <h1>Frontend Developer.</h1>
+            <h1>Website Developer.</h1>
           </Reveal>
         </div>
       </div>

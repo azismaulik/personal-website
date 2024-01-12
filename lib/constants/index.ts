@@ -3,7 +3,7 @@ import { ProjectorIcon, MonitorPlay, Wallpaper } from "lucide-react";
 export const menus = [
   {
     name: "Project",
-    url: "/#project",
+    url: "/#projects",
     icon: ProjectorIcon,
   },
   // {
@@ -53,8 +53,9 @@ export const projects = [
   {
     name: "Spotify Clone",
     image: "spotify-clone.png",
-    description: "",
-    link: "#",
+    description:
+      "Aplikasi web untuk menampilkan data lagu dan playlist dari Spotify dan juga mempunyai fitur sama dengan Spotify seperti putar lagu, search, shuffle, dll.",
+    link: null,
     stacks: [
       "React",
       "NextJS",
@@ -68,44 +69,46 @@ export const projects = [
   {
     name: "Movie Collection",
     image: "movie-collections.png",
-    description: "",
+    description: "Aplikasi web untuk menampilkan data film dari TMDB API.",
     link: "https://movie-collections.vercel.app/",
     stacks: ["React", "TailwindCSS", "JavaScript", "TMDB API"],
   },
   {
     name: "Game Collections",
     image: "game-collections.png",
-    description: "",
+    description: "Aplikasi web untuk menampilkan data game dari RAWG API.",
     link: "https://game-collections.vercel.app/",
     stacks: ["React", "NextJS", "Javascript", "TailwindCSS", "RAWG API"],
   },
   {
     name: "AI Chat & Image generator",
     image: "ai.png",
-    description: "",
-    link: "https://azis-openai.vercel.app/chat",
+    description:
+      "Aplikasi web untuk dapat berkomunikasi dengan AI dan membuat gambar AI dari OpenAI API.",
+    link: null,
     stacks: ["React", "TailwindCSS", "DaisyUI", "Javascript", "OpenAI API"],
   },
 
   {
     name: "Game News",
     image: "game-news.png",
-    description: "",
+    description: "Aplikasi web untuk menampilkan data berita mengenai game.",
     link: "https://azis-game-news.vercel.app/",
     stacks: ["React", "Javascript", "TailwindCSS", "DaisyUI", "Game News API"],
   },
   {
     name: "Islamic App",
     image: "quran-app.png",
-    description: "",
+    description:
+      "Aplikasi web untuk menampilkan quran, doa-doa, dan jadwal shalat.",
     link: "https://azis-quran-app.vercel.app/",
     stacks: ["React", "TailwindCSS", "JavaScript", "DaisyUI", "Quran API"],
   },
   {
     name: "Playgrounds",
     image: "playgrounds.png",
-    description: "",
-    link: "#",
+    description: "Section yang berguna seperti memilih warna, kalkulator, dll.",
+    link: null,
     stacks: [
       "NextJS",
       "React",
@@ -119,14 +122,14 @@ export const projects = [
   {
     name: "ZeitPlan App (UI)",
     image: "zeitplan.png",
-    description: "",
+    description: "UI for Zeitplan App.",
     link: "https://zeitplan-ui.vercel.app/",
     stacks: ["React", "Javascript", "TailwindCSS", "DaisyUI", "AOS"],
   },
   {
     name: "Game Events (UI)",
     image: "game-events.png",
-    description: "",
+    description: "UI for Game Events App.",
     link: "https://azis-game-events.vercel.app/",
     stacks: ["React", "Javascript", "TailwindCSS", "DaisyUI"],
   },
